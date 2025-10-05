@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 [build]
   command = "cd frontend && npm run build"  
   publish = "frontend/dist"
@@ -10,6 +10,3 @@
 
 [context.production.environment]
   VITE_API_URL = "https://your-backend-api-url.com"
-=======
-
->>>>>>> b52fdd45c5a697c87c4e0e05b49a280acf54cfc7
