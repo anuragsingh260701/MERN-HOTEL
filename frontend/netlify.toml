@@ -1,11 +1,41 @@
 [build]
+<<<<<<< HEAD
   command = "cd frontend && npm run build"  
   publish = "frontend/dist"
 
+=======
+  command = "npm run build"
+  publish = "dist"
+  # Uncomment if code is in a subdirectory, e.g.:
+  # base = "frontend"
+
+# Enable SPA routing for deep links:
+>>>>>>> f9be7502ce05833b5de45317c0937f5b99ab32bc
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
 
+<<<<<<< HEAD
 [context.production.environment]
   VITE_API_URL = "https://your-backend-api-url.com"
+=======
+# Example production environment variables (customize to your needs):
+[context.production.environment]
+  VITE_API_URL = "https://api.example.com"
+  NODE_ENV = "production"
+
+# Recommended security and caching headers:
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Uncomment to configure Netlify Functions if you use them:
+# [functions]
+#   directory = "netlify/functions"
+>>>>>>> f9be7502ce05833b5de45317c0937f5b99ab32bc
